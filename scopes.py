@@ -60,3 +60,22 @@ outer()
 #built-in scope
 # Python has many built-in functions like print(), len(), sum(), etc.
 # Built-in functions exist in Python's memory before your program runs, so you can use them anytime. User-defined functions must be defined first before calling them.
+
+
+#priority to enclosed function
+a = 100
+
+def outer():
+    a = 200  # Enclosing scope
+    
+    def inner():
+        print(a)  # Will this print 100 or 200?
+    
+    inner()
+
+outer()
+# he output will be 200 
+
+
+#LEGB rule (priority of looking for variables)
+# Local > Enclosing > Global > Built-in
