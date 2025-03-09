@@ -145,3 +145,35 @@ def reverse(word):
 # Test cases
 print(reverse("hello"))  # Output: "olleh"
 print(reverse("python"))  # Output: "nohtyp"
+
+
+#exercise
+#fibonacci
+def fibonacci(n):
+    if n==0:
+        return 0
+    if n==1:
+        return 1
+    return fibonacci(n-1) + fibonacci(n-2)
+
+print(fibonacci(5))
+
+
+#palindrome
+def is_palindrome(word):
+    if len(word) <= 1:
+        return True
+    if word[0] != word[-1]:
+        return False
+    return is_palindrome(word[1:-1])
+
+print(is_palindrome("madam"))
+
+
+#power of a number
+def power(a,b):
+    if b == 0:
+        return 1
+    return a * power(a, b-1)
+
+print(power(2,3))
