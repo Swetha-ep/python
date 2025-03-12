@@ -31,6 +31,19 @@ print(name)  # John
 print(age)   # 30
 print(job)   # Engineer
 
+t = 1, 2, 3  # No need for parentheses
+print(t)  # Output: (1, 2, 3)
+a, b, c = t  # Unpacks tuple values into variables
+print(a)  # Output: 1
+print(b)  # Output: 2
+print(c)  # Output: 3
+
+
+a, *b = t
+print(a)  # 10
+print(b)  # [20, 30]  (b gets the rest as a list!)
+
+
 # tuples are immutable
 nums = (1, 2, 3)
 nums[0] = 10  # ❌ ERROR! Tuples cannot be modified.
@@ -48,6 +61,10 @@ print(numbers.index(4))  # 3 (Index of value 4)
 # You want to store fixed data (e.g., months of the year).
 # You need faster access (tuples are slightly faster than lists).
 # You want to ensure data remains unchanged (immutability)
+# Used as Dictionary Keys (since they're hashable).
+data = {(1, 2): "Point A", (3, 4): "Point B"}
+print(data[(1, 2)])  # Output: "Point A"
+
 
 # concatenation
 a = (10, 20, 30)
